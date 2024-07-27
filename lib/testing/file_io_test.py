@@ -1,4 +1,10 @@
-from file_io import write_file, append_file, read_file
+import sys
+import os
+
+# Add the project root directory to the Python path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, project_root)
+from lib.file_io import write_file, append_file, read_file
 
 def test_write_file(tmp_path):
     """Test write_file()"""
